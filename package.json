@@ -1,0 +1,33 @@
+{
+  "name": "cleanSlate",
+  "version": "1.0.0",
+  "description": "none",
+  "main": "src/index.html",
+  "scripts": {
+    "test": "serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "g"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Manu Antony",
+  "license": "Private",
+  "dependencies": {
+    "bower": "^1.6.7",
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.0.5",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-msx": "^0.4.0",
+    "gulp-run": "^1.6.12"
+  }
+}
