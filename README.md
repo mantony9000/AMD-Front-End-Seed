@@ -1,7 +1,8 @@
 # AMD - FrontEnd Seed Framework
 
-This project is meant to appeal to people who want one codebase to work cross-browser and cross-platform web applicatins
-This can be used for Rest based applications only at the moment. It can serve as a Independent FrontEnd Application
+This project is meant to appeal to people who want one codebase to work cross-browser and cross-platform web applications
+This can be used for Rest based applications only at the moment. It can serve as a Independent FrontEnd Application.
+
 Advantages of using this framework:
   - Extremely fast development
   - Uses LESS for css.
@@ -14,7 +15,7 @@ Advantages of using this framework:
 0.0.1
 
 ### Tech
-Todo
+#Todo
 
 
 ### Installation
@@ -36,6 +37,12 @@ For production environments - To run the application
 $ gulp serve
 ```
 
+Verify the deployment by navigating to your server address in your preferred browser.
+
+```sh
+127.0.0.1:3000
+```
+
 ### Plugins
 
 Plugins currently used (Required )
@@ -52,24 +59,22 @@ Want to contribute? Great!
 This  uses Gulp + browser-sync for fast developing.
 Make a change in your file and instantanously see your updates!
 
-```
+
 #### Building for source
 For production release:
 ```sh
 $ gulp build
 ```
+
+
 Generating pre-built zip archives for distribution:
 ```sh
 $ gulp compile
-
-
-
-
-Verify the deployment by navigating to your server address in your preferred browser.
-
-```sh
-127.0.0.1:3000
 ```
+
+
+
+
 
 
 ### N|Solid and NGINX
