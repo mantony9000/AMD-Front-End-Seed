@@ -1,37 +1,34 @@
 {
   "name": "cleanSlate",
-  "version": "1.0.0",
-  "description": "none",
-  "main": "src/index.html",
+  "version": "2.0.0",
+  "description": "Asynchronus Module Definition",
+  "main": "src/scripts/app.js",
   "scripts": {
     "serve": "gulp serve",
     "start": "webpack --config webpack.config.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "g"
-  },
+  "repository": "https://github.com/M94antony/AMD-Front-End-Seed",
   "keywords": [
     "javascript"
   ],
   "author": "Manu Antony",
   "license": "Private",
   "dependencies": {
-    "bower": "^1.6.7",
-    "gulp": "^3.9.0",
+    "hammerjs": "^2.0.8",
     "mithril": "^1.1.3",
-    "require": "^2.4.20"
+    "require": "^2.4.20",
+    "watchjs": "0.0.0"
   },
   "devDependencies": {
     "browser-sync": "^2.10.0",
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
     "gulp-less": "^3.0.5",
     "gulp-minify-css": "^1.2.1",
     "gulp-minify-html": "^1.0.4",
     "gulp-msx": "^0.4.0",
-    "gulp-run": "^1.6.12",
-    "webpack": "^3.4.1"
+    "gulp-npm-files": "^0.1.3",
+    "gulp-run": "^1.6.12"
   }
 }

@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-	gnf = require('gulp-npm-files');
 	less = require('gulp-less'),
 	concat = require('gulp-concat'),
 	minifyCSS = require('gulp-minify-css'),
@@ -31,29 +30,26 @@ gulp.task('msx-build', function(){
 		.pipe(msx({harmony: true}))
 		.pipe(gulp.dest(javascriptBUILD));
 });
-gulp.task('plugin-script-build', ['copyNpmDependenciesOnly'], function () {
-	
-
-	/*var pathsArray = common.getLibraryList(vendor.libraries_js.paths, '.js');
+gulp.task('require-script-build', function () {
+	var pathsArray = common.getLibraryList(vendor.libraries_js.paths, '.js');
 	pathsArray = common.processCutoff('./bower_components', pathsArray); // a necessasry function in reference with the gulpfiles location to locate the vendor scripts  
 	pathsArray.push(vendor.requiredlibs.mithril);
 	pathsArray.push(vendor.requiredlibs.require);
 	console.log(JSON.stringify(pathsArray));
 	
 	return gulp.src(pathsArray)
-		.pipe(gulp.dest(pluginsBUILD));*/
+		.pipe(gulp.dest(pluginsBUILD));
 });
-gulp.task('plugin-css-build', function () { // TODO: change as to handle(vendor) third party css libs so it integrates into one css file only
-	
-	/*var pathsArray = common.getLibraryList(vendor.libraries_css, '.css');
+gulp.task('require-css-build', function () { // TODO: change as to handle(vendor) third party css libs so it integrates into one css file only
+	var pathsArray = common.getLibraryList(vendor.libraries_css, '.css');
 	pathsArray = common.processCutoff('./bower_components', pathsArray); // a necessasry function in reference with the gulpfiles location to locate the vendor styles
 	console.log(JSON.stringify(pathsArray));
 	return gulp.src(pathsArray)
 		.pipe(concat('vendor.min.css')) 
 		.pipe(minifyCSS())
-		.pipe(gulp.dest(cssBUILD));*/
+		.pipe(gulp.dest(cssBUILD));
 });
-gulp.task('less-build', ['plugin-css-build'], function () {
+gulp.task('less-build', ['require-css-build'], function () {
 	// order is themes variables - then  main less or folder files - then common - then app - then app components
 	return gulp.src(['./src/less/themes/**/*.less', './src/less/*.less', './src/less/common/**/*.less', './src/scripts/app/**/*.less', cssBUILD + '/vendor.min.css']) // TODO: update so that sub components styles are also overriding the primary components
 		.pipe(concat('superstyles.min.css'))
@@ -68,31 +64,4 @@ gulp.task('html-build', function () {
 });
 
 
-//#####################################  GULP NODE FILES
-		// Copy dependencies to build/node_modules/ 
-		gulp.task('copyNpmDependenciesOnly', function() {
-		  gulp.src(gnf(), {base:'./'}).pipe(gulp.dest(pluginsBUILD));
-		});
-		 
-		// Copy dependencies and devDependencies to build/node_modules/ 
-		gulp.task('copyAllNpmDependencies', function() {
-		  gulp.src(gnf(true), {base:'./'}).pipe(gulp.dest('./build'));
-		});
-		 
-		// Copy dependencies to build/node_modules/ by 
-		// value in './path/to/package.json' file 
-		gulp.task('copyNpmDependenciesAtDifferentFolder', function() {
-		  gulp
-		    .src(gnf(null, './path/to/package.json'), {base:'./'})
-		    .pipe(gulp.dest('./build'));
-		});
-		 
-		// Copy dependencies and devDependencies to build/node_modules/ by 
-		// value in './path/to/package.json' file 
-		gulp.task('copyAllNpmDependenciesAtDifferentFolder', function() {
-		  gulp
-		    .src(gnf(true, './path/to/package.json'), {base:'./'})
-		    .pipe(gulp.dest('./build'));
-		});
- 
-gulp.task('build', ['assets', 'build-fonts', 'less-build', 'script-build', 'html-build', 'plugin-script-build']);
+gulp.task('build', ['assets', 'build-fonts', 'less-build', 'script-build', 'html-build', 'require-script-build']);
