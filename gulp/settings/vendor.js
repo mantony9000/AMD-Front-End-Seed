@@ -3,12 +3,12 @@
  */
 module.exports = {
 	requiredlibs: {
-		require: './required-dependencies/require/require.min.js'
+		require: './required-dependencies/require/require.min.js',
+		mithril: './required-dependencies/mithril/mithril.min.js'
 	},
 	libraries_js:{
 		baseUrl: "src/scripts",
 		paths: {
-			mithril: "../../bower_components/mithril/mithril.min",
 			lodash: "../../bower_components/lodash/dist/lodash.core.min",
 			watch: "../../bower_components/watch/src/watch.min",
 			snabbt: "../../bower_components/snabbt.js/snabbt.min",

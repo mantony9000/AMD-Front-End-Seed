@@ -4,17 +4,7 @@ var	pluginLocation = '../plugins';
 var plugins = [
 		{
 			name : 'mithril',
-			main: 'mithril.min',
-			location : pluginLocation
-		},
-		{
-			name : 'watch',
-			main: 'watch.min',
-			location : pluginLocation
-		},
-		{
-			name : 'hammer',
-			main: 'hammer.min',
+			main: 'mithril.min', // have separate for prod and build
 			location : pluginLocation
 		}
 	];
@@ -22,6 +12,6 @@ requirejs.config( {
 	packages : plugins
 });
 // below gives global scope
-define(['mithril', 'watch', 'hammer'],function(m, watch, hammer){
+define(['mithril'],function(m){
 	return plugins;
 });

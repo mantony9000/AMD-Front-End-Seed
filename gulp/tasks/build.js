@@ -33,6 +33,7 @@ gulp.task('msx-build', function(){
 gulp.task('require-script-build', function () {
 	var pathsArray = common.getLibraryList(vendor.libraries_js.paths, '.js');
 	pathsArray = common.processCutoff('./bower_components', pathsArray); // a necessasry function in reference with the gulpfiles location to locate the vendor scripts  
+	pathsArray.push(vendor.requiredlibs.mithril);
 	pathsArray.push(vendor.requiredlibs.require);
 	console.log(JSON.stringify(pathsArray));
 	

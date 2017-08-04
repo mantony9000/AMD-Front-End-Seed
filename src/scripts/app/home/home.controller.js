@@ -1,4 +1,4 @@
-define(['routing/routes', 'hammer'], function(routes, Hammer){
+define(['routing/routes'], function(routes){
 	return function(){
 		this.init = function(){
 		};
