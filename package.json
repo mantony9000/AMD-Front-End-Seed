@@ -12,11 +12,16 @@
     "javascript"
   ],
   "author": "Manu Antony",
-  "license": "Private",
+  "license": "GPL-3.0",
   "dependencies": {
+    "createjs-soundjs": "^0.6.2",
     "hammerjs": "^2.0.8",
     "mithril": "^1.1.3",
-    "require": "^2.4.20",
+    "requirejs": "^2.3.4",
+    "skeleton-css": "^2.0.4",
+    "snabbt.js": "^0.6.4",
+    "socket.io": "^2.0.3",
+    "three": "^0.86.0",
     "watchjs": "0.0.0"
   },
   "devDependencies": {
@@ -29,6 +34,7 @@
     "gulp-minify-html": "^1.0.4",
     "gulp-msx": "^0.4.0",
     "gulp-npm-files": "^0.1.3",
-    "gulp-run": "^1.6.12"
+    "gulp-run": "^1.6.12",
+    "require": "^2.4.20"
   }
 }

@@ -3,8 +3,8 @@ var clear = console.clear.bind(console);
 var	pluginLocation = '../plugins';
 var plugins = [
 		{
-			name : 'mithril',
-			main: 'mithril.min', // have separate for prod and build
+			name: 'mithril',
+			main: 'mithril', // have separate for prod and build
 			location : pluginLocation
 		}
 	];
